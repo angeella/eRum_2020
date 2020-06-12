@@ -234,7 +234,7 @@ Design Analysis:
 - **Further directions**: other effect sizes, Bayesian approach (Bayes Factor).
 </p>
 <div p style="position: fixed; bottom: 0; right: 0; width:40%; text-align: left">
-Reproducible slides on https://github.com/angeella/eRum2020.
+Reproducible slides on https://github.com/angeella/eRum_2020.
 </div>
 # {#future-steps .emphasized data-background=back.jpg data-background-size=cover}
 
