@@ -1,0 +1,245 @@
+---
+title: "PRDA package: Prospective and Retrospective Design Analysis."
+author: 'Andreella, A., Bertoldo, G., Vesely, A., Altoe, G. and Callegher, C. '
+date: "June 19, 2020"
+output:
+  ioslides_presentation:
+    css: style.css
+    incremental: yes
+    logo: logo_psicostat.png
+    smaller: yes
+    theme: cosmo
+    transition: slower
+    widescreen: true
+  slidy_presentation:
+    incremental: yes
+---
+
+# The power ritual {data-background=background.jpg data-background-size=cover}
+
+## The power ritual
+
+<p class="bottom-three">
+- **Replication crisis** in social sciences and medicine $\rightarrow$ Starting to <span style="color:rgb(17,57,219);">scrutinize</span> published findings by promoting large-scale replication effort.
+</p>
+
+<p class="bottom-three">
+- **However**, they found smaller effects than originals $\rightarrow$ <span style="color:rgb(17,57,219);">Decline effect</span>:
+  - **What does not kill statistical significance makes it stronger**;
+  - **Winner curse**.
+</p>
+
+<p class="bottom-three">
+- <span style="color:rgb(17,57,219);">Statistical inference</span> is too often viewed as an **isolated procedure** limited to the analysis of data that have already been collected.
+</p>
+
+
+<p class="bottom-three">
+- From **null ritual** to **power ritual**! :(
+</p>
+
+
+# Design Analysis {data-background=background.jpg data-background-size=cover}
+
+## Only power matters?
+
+<p class="bottom-three">
+ - From Gelman and Carlin (2014), effect size estimation and statistical significance are <span style="color:rgb(17,57,219);">closely related</span>:
+
+  - **Type M (magnitude) error** (the exaggeration ratio): indicates the predictable average <span style="color:rgb(17,57,219);">overestimation</span> of an statistically significant effect;
+ 
+  - **Type S (sign) error** (the sign error): indicates the probability to find a statistically significant effect in the <span style="color:rgb(17,57,219);">opposite direction</span> to the one considered plausible.
+</p>
+<p class="bottom-three">
+ - Why do these errors matter? $\rightarrow$ <span style="color:rgb(17,57,219);">Hype and Disappointment Cycle!</span>
+</p>
+<p class="bottom-three">
+ - Consider Type M and Type S errors in Design Analysis:
+
+   - **Retrospective Design Analysis**;
+
+   - **Prospective Design Analysis**.
+</p>
+
+# The PRDA package {data-background=background.jpg data-background-size=cover}
+
+
+
+## Introduction
+<p class="bottom-three">
+How to install it?
+
+```{r, eval = F}
+devtools::load_all("C:/Users/Angela Andreella/Documents/Rpackage/PRDA_beta/R/")
+```
+</p>
+
+<p class="bottom-three">
+Two implementations:
+
+ - Pearson correlation: $H_0: \rho = 0$;
+
+ - Cohen's $d$: $H_0: d = 0$ (one sample and two samples).
+</p>
+
+## Retrospective Design Analysis
+
+```{r, eval = F}
+retrospective(sample_n1,
+              effect_size,
+              sample_n2 = NULL,
+              effect_type = c("cohen_d","correlation"),
+              alternative = c("two.sided","less","greater"))
+```
+
+<span style="color:rgb(17,57,219);">Input:</span>
+
+**sample_n1**: sample size
+
+**effect_size**: value of the effect size
+
+**sample_n2**: sample size if two samples test is used 
+
+**effect_type**: Which effect size do you want to analyze?
+
+**alternative**: Which alternative hypothesis?
+
+<span style="color:rgb(17,57,219);">Output:</span>
+
+Power, Type S, Type M, and test's characteristic
+
+## Prospective Design Analysis 
+
+```{r, eval = F}
+prospective(effect_size, 
+            power, 
+            effect_type = c("cohen_d","correlation"),
+            alternative = c("two.sided","less","greater"))
+```
+
+<span style="color:rgb(17,57,219);">Input:</span>
+
+**effect_size**: effect size value of the study
+
+**power**: power value of the study 
+
+**effect_type**: Which effect size do you want to analyze?
+
+**alternative**: Which alternative hypothesis?
+
+<span style="color:rgb(17,57,219);">Output:</span>
+
+Power, Type S, Type M, and test's characteristic
+
+# Case Studies {data-background=background.jpg data-background-size=cover}
+
+## Pearson correlation
+
+We consider the study published in Science by Eisenberger et al. (2003) entitled: <span style="color:rgb(17,57,219);">"Does Rejection Hurt? An fMRI Study of Social Exclusion"</span>. 
+<p class="bottom-three">
+ - The Anterior Cingulate Cortex (ACC) is involved in the experience of physical pain. **Could pain from social stimuli, such as social exclusion, share similar neural underpinnings?**
+</p>
+<p class="bottom-three"> 
+ - Each of the $13$ participants play a virtual game with other two fictitious players while undergoing functional Magnetic Resonance Imaging (fMRI);
+</p> 
+<p class="bottom-three"> 
+ - Players had to toss a virtual ball among each other in three conditions: social inclusion, explicit social exclusion and implicit social exclusion;
+</p>
+<p class="bottom-three">  
+ - Each participant completed a self-report measure regarding their perceived distress;
+</p>
+<p class="bottom-three">  
+ - **Correlation coefficient** between perceived distress and activity in the ACC, $r= .88$, $p < .005$.
+</p>
+## Pearson correlation - Retrospective Design Analysis
+
+**Plausible Effect Size** around $\rho = .25$ (Vul and Pashler (2017))
+
+```{r, eval = F}
+retrospective(sample_n1 = 13,
+              effect_size = 0.25,
+              effect_type = "correlation",
+              alternative = "two.sided",
+              sig_level = 0.05)
+```
+
+## Pearson correlation - Prospective Design Analysis
+
+We want the $80\%$ probability to detect an effect of at least $\rho = \pm .25$ (Vul and Pashler (2017)):
+
+```{r, eval = F}
+prospective(rho = 0.25, 
+            power = 0.8, 
+            effect_type = "correlation",
+            alternative = "two.sided")
+```
+
+## Cohen's d
+
+We consider the study <span style="color:rgb(17,57,219);">"A functional basis for structure-seeking: Exposure to structure promotes willingness to engage in motivated action"</span>  (Kay et al., 2014).
+<p class="bottom-three">
+ - $5$ studies showing that human beings have a natural tendency to perceive structure in the surrounding world.
+ </p>
+ <p class="bottom-three">
+ - $67$ partecipants randomly assign to read two different type of text: natural phenomena are unpredictable and random or predictable and systematic.
+ </p> 
+ <p class="bottom-three">
+ - The outcome measure was the willingness to work towards a goal that each participant chose as their most important. The expected result was higher score in structure condition than random.
+ </p>
+ <p class="bottom-three"> 
+ - **Cohen's d** regarding the difference between the high score means under the two condition equals $0.5$, with t-test equals $2$ and p-value $0.05$.
+</p>
+## Cohen's d - Retrospective Design Analysis
+
+**Plausible Effect Size** around $d = .2$
+
+```{r, eval = F}
+retrospective(sample_n1 = 34,
+              sample_n2 = 33,
+              effect_size = 0.2,
+              effect_type = "cohen_d",
+              alternative = "two.sided",
+              sig_level = 0.05)
+```
+
+## Cohen's d - Prospective Design Analysis
+
+We want the $80\%$ probability to detect an effect of at least $d = \pm .35$ (Vul and Pashler (2017)):
+
+```{r, eval = F}
+prospective(effect_size = 0.35, 
+            power = 0.8, 
+            effect_type = "cohen_d",
+            alternative = "two.sided")
+```
+
+# Take home messages {data-background=background.jpg data-background-size=cover}
+
+##
+
+Design Analysis:
+<p class="bottom-three">
+- **Contribute to planning more robust and replicable studies**;
+</p>
+<p class="bottom-three">
+- Use information <span style="color:rgb(17,57,219);">outside the data</span> at hand! Rather than focusing only on a single pilot or published study;
+</p>
+<p class="bottom-three">
+- Useful as <span style="color:rgb(17,57,219);">planning</span> phase of a study and to <span style="color:rgb(17,57,219);">evaluate already conducted studies</span>;
+</p>
+<p class="bottom-three">
+- Exploration of different <span style="color:rgb(17,57,219);">scenarios</span>;
+</p>
+<p class="bottom-three">
+- **Further directions**: other effect sizes, Bayesian approach (Bayes Factor).
+</p>
+<div p style="position: fixed; bottom: 0; right: 0; width:40%; text-align: left">
+Reproducible slides on https://github.com/angeella/eRum2020.
+</div>
+# {#future-steps .emphasized data-background=back.jpg data-background-size=cover}
+
+"Accept uncertainty. Be thoughtful, open, and modest.
+
+Remember *ATOM*."
+
+Wasserstein et al. (2019, p. 2)

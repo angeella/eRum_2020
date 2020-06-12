@@ -1,0 +1,41 @@
+slides > slide.title-slide hgroup h1 {
+  font-weight: bold;
+  font-size: 44pt;
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nextsteps {
+   color: blue;
+}
+
+.emphasized {
+   font-size: 1.2em;
+}
+
+.bottom-three {
+     margin-bottom: 1cm;
+  }
+
+
+  
+#future-steps {
+  color: black;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.emphasized {
+  font-size: 94pt;
+  text-align: center;
+  margin-bottom: 5cm;
+  margin-top: 5cm;
+  font-weight: bold;
+  font-style: italic;
+}
