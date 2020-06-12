@@ -1,2 +1,1 @@
-# eRum_2020
- Presentation for eRum 2020
+# Materials for the Poster at eRum conference 2020
