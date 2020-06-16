@@ -19,22 +19,22 @@ output:
 
 ## The power ritual
 
-- **Replication crisis** in social sciences and medicine $\rightarrow$ Starting to <span style="color:rgb(17,57,219);">promoting</span> large-scale replication effort.
+- **Replication crisis** in social sciences and medicine $\rightarrow$ Starting to <span style="color:rgb(237,118,35);">**promoting**</span> large-scale replication effort.
 </p>
 
-- **However**, they found smaller effects than originals $\rightarrow$ <span style="color:rgb(17,57,219);">Decline effect</span>:
+- **However**, they found smaller effects than originals $\rightarrow$ <span style="color:rgb(237,118,35);">**Decline effect**</span>:
   - **What does not kill statistical significance makes it stronger**;
   - **Winner curse**.
 
-- <span style="color:rgb(17,57,219);">Statistical inference</span> is often viewed as an **isolated procedure** $\rightarrow$ from **null ritual** to **power ritual**! :(
+- <span style="color:rgb(237,118,35);">**Statistical inference**</span> is often viewed as an **isolated procedure** $\rightarrow$ from **null ritual** to **power ritual**! :(
 
- - From Gelman and Carlin (2014), effect size estimation and statistical significance are <span style="color:rgb(17,57,219);">closely related</span>:
+ - From Gelman and Carlin (2014), effect size estimation and statistical significance are <span style="color:rgb(237,118,35);">**closely related**</span>:
 
-   1. **Type M (magnitude) error** (the exaggeration ratio): indicates the predictable average <span style="color:rgb(17,57,219);">overestimation</span> of an statistically significant effect;
+   1. **Type M (magnitude) error** (the exaggeration ratio): indicates the predictable average <span style="color:rgb(17,57,219);">**overestimation**</span> of an statistically significant effect;
  
-   2. **Type S (sign) error** (the sign error): indicates the probability to find a statistically significant effect in the <span style="color:rgb(17,57,219);">opposite direction</span> to the one considered plausible.
+   2. **Type S (sign) error** (the sign error): indicates the probability to find a statistically significant effect in the <span style="color:rgb(17,57,219);">**opposite direction**</span> to the one considered plausible.
 
- - Design Analysis: **Retrospective** and  **Prospective**
+ - <span style="color:rgb(237,118,35);">**Design Analysis**</span>: **Retrospective** and  **Prospective**
 
 
 
@@ -116,25 +116,25 @@ prospective(effect_size, power, ratio_n = 1,
 
 ## Pearson correlation
 
-We consider the study by Eisenberger et al. (2003) entitled: <span style="color:rgb(17,57,219);">"Does Rejection Hurt? An fMRI Study of Social Exclusion"</span>. 
+We consider the study by Eisenberger et al. (2003) entitled: <span style="color:rgb(237,118,35);">"Does Rejection Hurt? An fMRI Study of Social Exclusion"</span>. 
 <p class="bottom-three">
  - The Anterior Cingulate Cortex (ACC) is involved in the experience of physical pain. **Could pain from social stimuli, such as social exclusion, share similar neural underpinnings?**
 </p>
 <p class="bottom-three"> 
- - Each of the $13$ participants play a virtual game with other **two fictitious players** while undergoing functional Magnetic Resonance Imaging (fMRI);
+ - Each of the $13$ participants play a virtual game with other <span style="color:rgb(237,118,35);">**two fictitious players**</span> while undergoing functional Magnetic Resonance Imaging (fMRI);
 </p> 
 <p class="bottom-three"> 
- - Players had to toss a virtual ball among each other in three conditions: **social inclusion**, **explicit social exclusion** and **implicit social exclusion**;
+ - Players had to toss a virtual ball among each other in three conditions: <span style="color:rgb(237,118,35);">**social inclusion**</span>, <span style="color:rgb(237,118,35);">**explicit social exclusion**</span> and <span style="color:rgb(237,118,35);">**implicit social exclusion**</span>;
 </p>
 <p class="bottom-three">  
- - Each participant completed a **self-report measure** regarding their perceived distress;
+ - Each participant completed a <span style="color:rgb(237,118,35);">**self-report measure**</span> regarding their perceived distress;
 </p>
 <p class="bottom-three">  
- - **Correlation coefficient** between perceived distress and activity in the ACC, $r= .88$, $p < .005$.
+ - <span style="color:rgb(237,118,35);">**Correlation coefficient**</span> between perceived distress and activity in the ACC, $r= .88$, $p < .005$.
 </p>
 ## Pearson correlation - Retrospective Design Analysis
 
-We consider a **plausible effect size** equals $\rho = .25$ (Vul and Pashler, 2017):
+We consider a <span style="color:rgb(237,118,35);">**plausible effect size**</span> equals $\rho = .25$ (Vul and Pashler, 2017):
 
 ```{r, eval = F}
 retrospective(sample_n1 = 13,
@@ -146,7 +146,7 @@ retrospective(sample_n1 = 13,
 
 ## Pearson correlation - Prospective Design Analysis
 
-We want the $80\%$ probability to detect a **plausible effect size** of at least $\rho = .25$ (Vul and Pashler, 2017):
+We want the $80\%$ probability to detect a <span style="color:rgb(237,118,35);">**plausible effect size**</span> of at least $\rho = .25$ (Vul and Pashler, 2017):
 
 ```{r, eval = F}
 prospective(effect_size = 0.25, 
@@ -159,17 +159,17 @@ prospective(effect_size = 0.25,
 
 We consider the study by Kay et al., 2014 entitled <span style="color:rgb(17,57,219);">"A functional basis for structure-seeking: Exposure to structure promotes willingness to engage in motivated action"</span>.
  <p class="bottom-three">
- - $67$ partecipants randomly assign to read two different type of text: natural phenomena are  **unpredictable and random ** or  **predictable and systematic**.
+ - $67$ partecipants randomly assign to read two different type of text: natural phenomena are  <span style="color:rgb(237,118,35);">**unpredictable and random**</span> or  <span style="color:rgb(237,118,35);">**predictable and systematic**</span>.
  </p> 
  <p class="bottom-three">
- - The outcome measure was the inclination to work towards a goal that each participant chose as their most important. The expected result was **higher score in structure condition than random**.
+ - The outcome measure was the inclination to work towards a goal that each participant chose as their most important. The expected result was <span style="color:rgb(237,118,35);">**higher score in structure condition than random**</span>.
  </p>
  <p class="bottom-three"> 
- - **Cohen's d** regarding the difference between the high score means under the two condition equals $0.5$, with t-test equals $2$ and p-value $0.05$.
+ - <span style="color:rgb(237,118,35);">**Cohen's d**</span> regarding the difference between the high score means under the two condition equals $0.5$, with t-test equals $2$ and p-value $0.05$.
 </p>
 ## Cohen's d - Retrospective Design Analysis
 
-We consider a **plausible effect size** equals $d = .35$ (Open Science Collaboration, 2015):
+We consider a <span style="color:rgb(237,118,35);">**plausible effect size**</span> equals $d = .35$ (Open Science Collaboration, 2015):
 
 ```{r, eval = F}
 retrospective(sample_n1 = 34,
@@ -182,7 +182,7 @@ retrospective(sample_n1 = 34,
 
 ## Cohen's d - Prospective Design Analysis
 
-We want the $80\%$ probability to detect a **plausible effect size** of at least $d = .35$ (Open Science Collaboration, 2015):
+We want the $80\%$ probability to detect a <span style="color:rgb(237,118,35);">**plausible effect size**</span> of at least $d = .35$ (Open Science Collaboration, 2015):
 
 ```{r, eval = F}
 prospective(effect_size = 0.35, 
@@ -208,24 +208,24 @@ prospective(effect_size = 0.35,
 
 ##
 
-Design Analysis:
+<span style="color:rgb(17,57,219);">Design Analysis</span>:
 <p class="bottom-three">
-- **Type M** and **Type S** errors quantify the inferential risks in terms of effect size estimation $\rightarrow$ <span style="color:rgb(17,57,219);">surpass power ritual</span>
+- **Type M** and **Type S** errors quantify the <span style="color:rgb(237,118,35);">**inferential risks**</span> in terms of effect size estimation $\rightarrow$ **surpass power ritual**
 </p>
 <p class="bottom-three">
-- Contribute to planning more robust and replicable studies;
+- Contribute to planning more <span style="color:rgb(237,118,35);">**robust and replicable studies**</span>;
 </p>
 <p class="bottom-three">
-- Use information <span style="color:rgb(17,57,219);">outside the data</span> at hand! Rather than focusing only on a single pilot or published study;
+- Use information <span style="color:rgb(237,118,35);">**outside the data**</span> at hand! Rather than focusing only on a single pilot or published study;
 </p>
 <p class="bottom-three">
-- Contribute <span style="color:rgb(17,57,219);">planning</span> to planning more robust and replicable studies (**PROSPECTIVE**) and to <span style="color:rgb(17,57,219);">evaluate already conducted studies (**RETROSPECTIVE**)</span>;
+- Contribute <span style="color:rgb(237,118,35);">**planning**</span> to planning more robust and replicable studies (<span style="color:rgb(17,57,219);">**PROSPECTIVE**</span>) and to <span style="color:rgb(237,118,35);">**evaluate already conducted studies**</span> (<span style="color:rgb(17,57,219);">**RETROSPECTIVE**</span>);
 </p>
 <p class="bottom-three">
-- Exploration of different <span style="color:rgb(17,57,219);">scenarios</span>;
+- Exploration of different <span style="color:rgb(237,118,35);">**scenarios**</span>;
 </p>
 <p class="bottom-three">
-- **Further directions**: other effect sizes, Bayesian approach (Bayes Factor).
+- <span style="color:rgb(17,57,219);">**Further directions**</span>: other effect sizes, Bayesian approach (Bayes Factor).
 </p>
 <div p style="position: fixed; bottom: 0; right: 0; width:40%; text-align: left">
 Slides and articles on https://github.com/angeella/eRum_2020.
