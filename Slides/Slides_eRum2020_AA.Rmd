@@ -6,13 +6,10 @@ output:
   ioslides_presentation:
     css: style.css
     incremental: yes
-    logo: Psicostat_hexagon.svg
     smaller: yes
-    theme: cosmo
     transition: slower
     widescreen: true
-  slidy_presentation:
-    incremental: yes
+    logo: Psicostat_hexagon.svg
 ---
 
 # The power ritual {data-background=background.jpg data-background-size=cover}
@@ -131,7 +128,7 @@ We consider the study by Eisenberger et al. (2003) entitled: <span style="color:
  - Each participant completed a <span style="color:rgb(237,118,35);">**self-report measure**</span> regarding their perceived distress;
 </p>
 <p class="bottom-three">  
- - <span style="color:rgb(237,118,35);">**Correlation coefficient**</span> between perceived distress and activity in the ACC, $r= .88$, $p < .005$.
+ - <span style="color:rgb(237,118,35);">**Correlation coefficient**</span> between perceived distress and activity in the ACC, $r= .88$, $p < .005$ and power equals $.13$.
 </p>
 ## Pearson correlation - Retrospective Design Analysis
 
