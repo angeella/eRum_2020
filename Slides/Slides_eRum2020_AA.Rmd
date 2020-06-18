@@ -6,7 +6,7 @@ output:
   ioslides_presentation:
     css: style.css
     incremental: yes
-    logo: logo_psicostat.png
+    logo: Psicostat_hexagon.svg
     smaller: yes
     theme: cosmo
     transition: slower
@@ -49,8 +49,9 @@ output:
 <p class="bottom-three">
 How to install it?
 
-```{r, warning=FALSE,eval = F}
-devtools::install_github("ClaudioZandonella/PRDA_beta")
+```{r, warning=FALSE,message=FALSE,comment=F}
+#devtools::install_github("masspastore/PRDA")
+library(PRDAbeta)
 ```
 </p>
 
@@ -136,23 +137,16 @@ We consider the study by Eisenberger et al. (2003) entitled: <span style="color:
 
 We consider a <span style="color:rgb(237,118,35);">**plausible effect size**</span> equals $\rho = .25$ (Vul and Pashler, 2017):
 
-```{r, eval = F}
-retrospective(sample_n1 = 13,
-              effect_size = 0.25,
-              effect_type = "correlation",
-              alternative = "two.sided",
-              sig_level = 0.05)
+```{r}
+retrospective(sample_n1 = 13, effect_size = 0.25, effect_type = "correlation", alternative = "two.sided", sig_level = 0.05)
 ```
 
 ## Pearson correlation - Prospective Design Analysis
 
 We want the $80\%$ probability to detect a <span style="color:rgb(237,118,35);">**plausible effect size**</span> of at least $\rho = .25$ (Vul and Pashler, 2017):
 
-```{r, eval = F}
-prospective(effect_size = 0.25, 
-            power = 0.8, 
-            effect_type = "correlation",
-            alternative = "two.sided")
+```{r}
+prospective(effect_size = 0.25, power = 0.8, effect_type = "correlation", alternative = "two.sided")
 ```
 
 ## Cohen's d
@@ -171,35 +165,24 @@ We consider the study by Kay et al., 2014 entitled <span style="color:rgb(17,57,
 
 We consider a <span style="color:rgb(237,118,35);">**plausible effect size**</span> equals $d = .35$ (Open Science Collaboration, 2015):
 
-```{r, eval = F}
-retrospective(sample_n1 = 34,
-              sample_n2 = 33,
-              effect_size = 0.2,
-              effect_type = "cohen_d",
-              alternative = "two.sided",
-              sig_level = 0.05)
+```{r}
+retrospective(sample_n1 = 34, sample_n2 = 33, effect_size = 0.2, effect_type = "cohen_d", alternative = "two.sided", sig_level = 0.05)
 ```
 
 ## Cohen's d - Prospective Design Analysis
 
 We want the $80\%$ probability to detect a <span style="color:rgb(237,118,35);">**plausible effect size**</span> of at least $d = .35$ (Open Science Collaboration, 2015):
 
-```{r, eval = F}
-prospective(effect_size = 0.35, 
-            power = 0.8, 
-            effect_type = "cohen_d",
-            alternative = "two.sided")
+```{r}
+prospective(effect_size = 0.35, power = 0.8, effect_type = "cohen_d", alternative = "two.sided")
 ```
 
 ## Cohen's d - Prospective Design Analysis
 
 We can also explore inferential risk:
 
-```{r, eval = F}
-prospective(effect_size = 0.35, 
-            power = 0.6, 
-            effect_type = "cohen_d",
-            alternative = "two.sided")
+```{r}
+prospective(effect_size = 0.35, power = 0.6, effect_type = "cohen_d", alternative = "two.sided")
 ```
 
 
@@ -227,7 +210,7 @@ prospective(effect_size = 0.35,
 <p class="bottom-three">
 - <span style="color:rgb(17,57,219);">**Further directions**</span>: other effect sizes, Bayesian approach (Bayes Factor).
 </p>
-<div p style="position: fixed; bottom: 0; right: 0; width:40%; text-align: left">
+<div p style="position: fixed; bottom: 1; right: 1; width:40%; text-align: left">
 Slides and articles on https://github.com/angeella/eRum_2020.
 </div>
 # {#future-steps .emphasized data-background=back.jpg data-background-size=cover}

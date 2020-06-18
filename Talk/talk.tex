@@ -1,0 +1,71 @@
+\documentclass{article} 
+\usepackage[round]{natbib}
+\usepackage[inline]{enumitem}
+\usepackage{adjustbox}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\usepackage{bbm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Angela Andreella}
+\cfoot{\thepage}
+\usepackage{mathtools} % mathtools builds on and extends amsmath package
+\DeclareMathOperator{\tr}{tr}
+\usepackage{xcolor}
+\newcommand\mynote[1]{\textcolor{red}{#1}}
+\usepackage[makeroom]{cancel}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{vmargin}
+\usepackage{relsize}
+\setmarginsrb{25mm}{25mm}{25mm}{25mm}{12pt}{10mm}{24pt}{10mm}
+
+%% Math operators
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{nicefrac}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+\newcounter{problem}
+\newcounter{solution}
+
+\newcommand\Problem{%
+	\stepcounter{problem}%
+	\textbf{\theproblem.}~%
+	\setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+	\textbf{Solution:}\\%
+}
+
+\newcommand\ASolution{%
+	\stepcounter{solution}%
+	\textbf{Solution \thesolution:}\\%
+}
+\parindent 0in
+\parskip 1em
+
+
+\begin{document}
+Thanks everybody to being here, and in particular thanks to the eRum organizers that make this event amazing and possible!
+
+So, I will present the PRDA package, a simple but I think very useful package that permits to compute prospective and retrospective design analysis.
+
+At first, I want to make a short introduction about the main problem, the replication crisis. It is well know that in the last years the replication crisis is a very big problem in many fields as medicine and psychology. For that, many researchers starts to promoting large-scale replication effort. However, many times when a studies is replicated they found smaller effects than originals, the so called decline effect.
+
+The problem is that statistical procedure is viewed as an isolated procedure which limits itself to the analysis of data that have already been collected. Also, the researchers tend to reject the null hypothesis in the testing framework without understing the concept of hypothesis testing and pvalues, the so called null ritual. 
+
+Then, the researcher after some years understand to insert also the effect size in their studies, however the power is not the only probability that must to take into account in the hypothesis testing framework. Also, without understanding it, we can fall into the power ritual. So, from null ritual to power ritual.
+
+The PRDA package permits to insert into the design analysis also two other aspects, the 
+
+
+
+
+\end{document}
