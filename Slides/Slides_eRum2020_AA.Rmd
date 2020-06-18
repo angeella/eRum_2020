@@ -7,7 +7,6 @@ output:
     css: style.css
     incremental: yes
     smaller: yes
-    transition: slower
     widescreen: true
     logo: Psicostat_hexagon.svg
 ---
