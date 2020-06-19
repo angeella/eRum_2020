@@ -47,7 +47,7 @@ How to install it?
 
 ```{r, warning=FALSE,message=FALSE,comment=F}
 #devtools::install_github("masspastore/PRDA")
-library(PRDAbeta)
+library(PRDA)
 ```
 </p>
 
@@ -208,9 +208,9 @@ prospective(effect_size = 0.35, power = 0.6, effect_type = "cohen_d", alternativ
 <p class="bottom-three">
 - <span style="color:rgb(17,57,219);">**Further directions**</span>: other effect sizes, Bayesian approach (Bayes Factor).
 </p>
-<div p style="position: fixed; bottom: 1; right: 1; width:40%; text-align: left">
-Slides and articles on https://github.com/angeella/eRum_2020 and package repository on https://github.com/masspastore/PRDA.
-</div>
+<p class="bottom-three">
+Slides and references on https://github.com/angeella/eRum_2020 and Package repository on https://github.com/masspastore/PRDA. 
+</p>
 # {#future-steps .emphasized data-background=back.jpg data-background-size=cover}
 
 "Accept uncertainty. Be thoughtful, open, and modest.
@@ -218,3 +218,5 @@ Slides and articles on https://github.com/angeella/eRum_2020 and package reposit
 Remember *ATOM*."
 
 Wasserstein et al. (2019, p. 2)
+
+
