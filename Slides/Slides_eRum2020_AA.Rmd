@@ -5,7 +5,7 @@ date: "June 19, 2020"
 output:
   ioslides_presentation:
     css: style.css
-    incremental: yes
+    incremental: no
     smaller: yes
     widescreen: true
     logo: Psicostat_hexagon.svg
@@ -82,7 +82,7 @@ retrospective(sample_n1, effect_size, sample_n2 = NULL,
 
 <span style="color:rgb(17,57,219);">**OUTPUT**:</span>  
 
- - ``power``, ``typeM``, and ``typeS`` and some ``test_info``
+ - ``power``, ``typeM``, and ``typeS`` and some ``Study characteristics``
 
 ## Prospective Design Analysis 
 
@@ -99,7 +99,7 @@ prospective(effect_size, power, ratio_n = 1,
 
  - ``power``: power value of the study 
 
- - ``ratio_n``: ratio between ``sample_n1`` and ``sample_n2``
+ - ``ratio_n2``: ratio between ``sample_n1`` and ``sample_n2``
 
  - ``effect_type``: Which effect size do you want to analyze?
 
@@ -107,7 +107,7 @@ prospective(effect_size, power, ratio_n = 1,
 
 <span style="color:rgb(17,57,219);">**OUTPUT**:</span>
 
- - ``power``, ``typeM``, and ``typeS`` and some ``test_info``
+ - ``power``, ``typeM``, ``typeS``, and ``Study characteristics`` 
 
 # Case Studies {data-background=background.jpg data-background-size=cover}
 
@@ -118,7 +118,7 @@ We consider the study by Eisenberger et al. (2003) entitled: <span style="color:
  - The Anterior Cingulate Cortex (ACC) is involved in the experience of physical pain. **Could pain from social stimuli, such as social exclusion, share similar neural underpinnings?**
 </p>
 <p class="bottom-three"> 
- - Each of the $13$ participants play a virtual game with other <span style="color:rgb(237,118,35);">**two fictitious players**</span> while undergoing functional Magnetic Resonance Imaging (fMRI);
+ - Each of the $13$ participants plays a virtual game with other <span style="color:rgb(237,118,35);">**two fictitious players**</span> while undergoing functional Magnetic Resonance Imaging (fMRI);
 </p> 
 <p class="bottom-three"> 
  - Players had to toss a virtual ball among each other in three conditions: <span style="color:rgb(237,118,35);">**social inclusion**</span>, <span style="color:rgb(237,118,35);">**explicit social exclusion**</span> and <span style="color:rgb(237,118,35);">**implicit social exclusion**</span>;
@@ -134,7 +134,8 @@ We consider the study by Eisenberger et al. (2003) entitled: <span style="color:
 We consider a <span style="color:rgb(237,118,35);">**plausible effect size**</span> equals $\rho = .25$ (Vul and Pashler, 2017):
 
 ```{r}
-retrospective(sample_n1 = 13, effect_size = 0.25, effect_type = "correlation", alternative = "two.sided", sig_level = 0.05)
+retrospective(sample_n1 = 13, effect_size = 0.25, effect_type = "correlation", alternative = "two.sided", 
+              sig_level = 0.05)
 ```
 
 ## Pearson correlation - Prospective Design Analysis
@@ -149,20 +150,21 @@ prospective(effect_size = 0.25, power = 0.8, effect_type = "correlation", altern
 
 We consider the study by Kay et al., 2014 entitled <span style="color:rgb(17,57,219);">"A functional basis for structure-seeking: Exposure to structure promotes willingness to engage in motivated action"</span>.
  <p class="bottom-three">
- - $67$ partecipants randomly assign to read two different type of text: natural phenomena are  <span style="color:rgb(237,118,35);">**unpredictable and random**</span> or  <span style="color:rgb(237,118,35);">**predictable and systematic**</span>.
+ - $67$ partecipants randomly assign to read two different types of text: natural phenomena are  <span style="color:rgb(237,118,35);">**unpredictable and random**</span> or  <span style="color:rgb(237,118,35);">**predictable and systematic**</span>.
  </p> 
  <p class="bottom-three">
- - The outcome measure was the inclination to work towards a goal that each participant chose as their most important. The expected result was <span style="color:rgb(237,118,35);">**higher score in structure condition than random**</span>.
+ - The outcome measure was the inclination to work towards a goal that each participant chose as their most important. The expected result was a <span style="color:rgb(237,118,35);">**higher score in structure condition than random**</span>.
  </p>
  <p class="bottom-three"> 
- - <span style="color:rgb(237,118,35);">**Cohen's d**</span> regarding the difference between the high score means under the two condition equals $0.5$, with t-test equals $2$ and p-value $0.05$.
+ - <span style="color:rgb(237,118,35);">**Cohen's d**</span> regarding the difference between the high score means under the two conditions equals $0.5$, with t-test equals $2$ and p-value $0.05$.
 </p>
 ## Cohen's d - Retrospective Design Analysis
 
 We consider a <span style="color:rgb(237,118,35);">**plausible effect size**</span> equals $d = .35$ (Open Science Collaboration, 2015):
 
 ```{r}
-retrospective(sample_n1 = 34, sample_n2 = 33, effect_size = 0.2, effect_type = "cohen_d", alternative = "two.sided", sig_level = 0.05)
+retrospective(sample_n1 = 34, sample_n2 = 33, effect_size = 0.2, effect_type = "cohen_d", 
+              alternative = "two.sided", sig_level = 0.05)
 ```
 
 ## Cohen's d - Prospective Design Analysis
@@ -207,7 +209,7 @@ prospective(effect_size = 0.35, power = 0.6, effect_type = "cohen_d", alternativ
 - <span style="color:rgb(17,57,219);">**Further directions**</span>: other effect sizes, Bayesian approach (Bayes Factor).
 </p>
 <div p style="position: fixed; bottom: 1; right: 1; width:40%; text-align: left">
-Slides and articles on https://github.com/angeella/eRum_2020.
+Slides and articles on https://github.com/angeella/eRum_2020 and package repository on https://github.com/masspastore/PRDA.
 </div>
 # {#future-steps .emphasized data-background=back.jpg data-background-size=cover}
 
