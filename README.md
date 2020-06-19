@@ -11,4 +11,4 @@
  
  Package Repository: https://github.com/masspastore/PRDA.
  
- Check out the [Psicostat](https://ip146179.psy.unipd.it/psicostat/web/psicostat3_1.html) webpage for others projects!! :fire: :fire:  
+ Check out the [Psicostat](https://ip146179.psy.unipd.it/psicostat/web/index.html) webpage for others projects!! :fire: :fire:  
